@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var butonutku: UIButton!
     @IBOutlet weak var label: UILabel!
     
     var timer = Timer()
@@ -16,7 +17,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        kalanZaman = 15
+        kalanZaman = 3
         label.text = "Zaman: \(kalanZaman)"
         
     }
@@ -26,14 +27,19 @@ class ViewController: UIViewController {
         
     }
     
+    
     @objc func timerFonksiyonu(){
         
+        butonutku.isEnabled = false
         label.text = "Zaman: \(kalanZaman)"
         kalanZaman = kalanZaman - 1
         if kalanZaman == 0 {
             label.text = "Süre Bitti!"
             timer.invalidate()
-            kalanZaman = 15
+            kalanZaman = 3
+            butonutku.isEnabled = true
+            
+            
         }
         
     }

@@ -47,6 +47,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="butonutku" destination="hrh-R6-sCI" id="6ab-ke-kew"/>
                         <outlet property="label" destination="rdb-KD-X6t" id="gJJ-SJ-7cj"/>
                     </connections>
                 </viewController>
